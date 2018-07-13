@@ -32,8 +32,6 @@
     <CodigoServico>{{ rps.codigo_atividade }}</CodigoServico>
     <AliquotaServicos>{{ rps.aliquota_atividade }}</AliquotaServicos>
     <ISSRetido>{{ rps.iss_retido | default('false') }}</ISSRetido>
-    <PercentualCargaTributaria>{{ rps.percentual_carga_tributaria }}</PercentualCargaTributaria>
-    <FonteCargaTributaria>{{ rps.fonte_carga_tributaria }}</FonteCargaTributaria>
     <CPFCNPJTomador>
         {% if rps.tomador.tipo_cpfcnpj == 1 -%}
            <CPF>{{ rps.tomador.cpf_cnpj }}</CPF>
@@ -57,6 +55,8 @@
       <CEP>{{ rps.tomador.cep }}</CEP>
     </EnderecoTomador>
     <Discriminacao>{{ rps.descricao|normalize|escape }}</Discriminacao>
+    <PercentualCargaTributaria>{{ rps.percentual_carga_tributaria }}</PercentualCargaTributaria>
+    <FonteCargaTributaria>{{ rps.fonte_carga_tributaria }}</FonteCargaTributaria>
   </RPS>
   {% endfor %}
 </PedidoEnvioLoteRPS>
