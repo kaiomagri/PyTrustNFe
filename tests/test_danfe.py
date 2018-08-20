@@ -21,6 +21,6 @@ class test_danfe(unittest.TestCase):
         oDanfe = danfe(list_xml=[xml_element])
 
         # Para testar localmente o Danfe
-        # with open('/home/danimar/danfe.pdf', 'w') as oFile:
+        # with open('/your/local/path', 'wb') as oFile:
         with tempfile.TemporaryFile(mode='wb') as oFile:
             oDanfe.writeto_pdf(oFile)
